@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Single+Day&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+ 
+        body{
+            background-color:green;
+            animation-name: example;
+            animation-duration: 5s;
+            /* background-image: url(tree1.gif);
+            background-position: center; */
+             
+        }
+        @keyframes example{
+            from {background-color: green;}
+            to{background-color: red;}
+        }
+        .container-fluid{
+            height:100vh;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+             
+        }
+
+        .btn-xl {
+    padding: 1.25rem 2.5rem;
+}
+ 
+
+.btn{
+    font-family: 'Roboto Mono', monospace;
+}
+
+  
+        </style>
+
+</head>
+
+<body>
+
+
+    <section> 
+    <div class="container-fluid">
+      <div>
+          <div  class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <p style="font-size: 60px; font-weight: bold; color:pink;  font-family: 'Single Day', cursive;" id="xmas" onmouseover="mouseOver()" onmouseout="mouseOut()">Merry Christmas</p>
+          </div>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button  onclick="changeImage()" type="button" class="btn btn-outline-light btn-lg px-4 gap-3">Click Me</button>
+            </div>
+            
+         <div style="margin-top: 40px;">
+             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <p><img id="mas" alt="xmas tree" src="tree1.gif" width="400" height="400"></p>
+                 
+            </div>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a class="btn btn-outline-light btn-xl px-4 gap-3" style="font-size: 20px;"  href="#about">Click Me Again</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section  class="content-section bg-warning"  id="about">
+
+            <div style="margin-top: 40px;">
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        
+                <video width="500px" height="700px" controls oncanplay="play()">
+                <source src="xmas.mp4" type="video/mp4">
+                
+                </video>
+                
+
+        
+                <p id="'play"></p>
+        
+             </div>
+             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+            <p>Video credit<a href="https://youtu.be/DitX5Vzo5bg?si=eqLVu-LH_qr3C6es" target="_blank">Gardiner Brothers</a>.</p>
+
+        </div>
+        
+
+
+    
+    </section>
+      
+
+     
+ 
+   
+   
+   
+
+     
+
+ 
+
+    <script>
+
+ function mouseOver() {
+  document.getElementById("xmas").style.color = "yellow";
+  document.getElementById("xmas").innerHTML = "Trims Cash "
+  document.getElementById("xmas").style.fontSize = "100px";
+}
+
+function mouseOut() {
+  document.getElementById("xmas").style.color = "red";
+  document.getElementById("xmas").innerHTML = "Merry Christmas "
+  document.getElementById("xmas").style.fontSize = "60px";
+}
+
+function changeImage() {
+    
+    if (document.getElementById("mas").src == "tree1.gif"){
+        document.getElementById("mas").src = "tree3.gif";
+    } else {
+        document.getElementById("mas").src = "tree2.gif";
+    }  
+}
+
+function play(){
+    document.getElementById("play").innerHTML ="can start playing"
+}
+
+ 
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+<footer>
+
+</footer>
+</html>
